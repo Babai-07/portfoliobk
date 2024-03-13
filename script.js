@@ -33,7 +33,14 @@ const handleSubmit = () => {
     "https://my-portfolio-backend-mjl9.onrender.com/api/v1/saveContact",
     requestOptions
   )
+
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.error(error));
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("msg").value = "";
 };
+
